@@ -31,7 +31,7 @@ describe('Testes de funcionalidades', () => {
       cy.get('[id="novoCampo"]').type('Apareceu')
     })
     it('Teste do XPATH', () =>{
-      cy.xpath('//*[@id="formNome"]').type('oi')
+      cy.xpath('//*[@id="formNome"]').type('ola')
     })
   })
   
