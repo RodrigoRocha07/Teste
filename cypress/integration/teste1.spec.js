@@ -30,7 +30,7 @@ describe('Testes de funcionalidades', () => {
       cy.get('[id="novoCampo"]').should('exist')
       cy.get('[id="novoCampo"]').type('Apareceu')
     })
-    it.only('Teste do XPATH', () =>{
+    it('Teste do XPATH', () =>{
       cy.xpath('//*[@id="formNome"]').type('oi')
     })
   })
