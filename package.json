@@ -17,9 +17,10 @@
   },
   "homepage": "https://github.com/RodrigoRocha07/Teste#readme",
   "dependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.7.0"
   },
   "devDependencies": {
     "cypress-xpath": "^2.0.1"
-  }
+  },
+  "keywords": []
 }
