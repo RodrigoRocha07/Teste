@@ -1,3 +1,5 @@
+
+
 describe('Testes de funcionalidades', () => {
     beforeEach(() => {
       cy.visit('https://wcaquino.me/cypress/componentes.html')
@@ -58,8 +60,23 @@ describe('Testes de funcionalidades', () => {
         .find('span')
         .should('contain','Item 2')
     //Sempre sair do escopo local e começar toda a busca novamente"
-      
       })
 
-  })
+    it('Teste de TimeOut', () => {
+      cy.get('#buttonDelay').click()
+      cy.get('#novoCampo',{ timeout: 1000 }).should('not.exist')
+      })
+
+    it('Teste de retry com for', () =>{
+      for (let i = 1; i < 4; i++) {
+        cy.get('[id="buttonCount"]').click();
+      }
+      cy.get('[id=buttonCount]').should('have.value','1111')
+      })
+      
+      
+   
+
+     
+})
   
