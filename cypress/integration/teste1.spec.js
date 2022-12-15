@@ -35,7 +35,7 @@ describe('Testes de funcionalidades', () => {
     })
 
 
-    it.only('Teste com find', () => {
+    it('Teste com find', () => {
       cy.get('#buttonList').click()
       cy.get('#lista li')
         .find('span')
@@ -45,6 +45,17 @@ describe('Testes de funcionalidades', () => {
         .find('span')
         .should('contain','Item 2')
     })
+    it.only('Teste com find', () => {
+      cy.get('#buttonListDOM').click()
+      cy.get('#lista li')
+        .find('span')
+        .should('contain','Item 1')
+      cy.get('#buttonList').click()
+      cy.get('#lista li')
+        .find('span')
+        .should('contain','Item 2')
+    })
+    //Sempre sair do escopo local e começar toda a busca novamente"
 
   })
   
