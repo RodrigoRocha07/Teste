@@ -33,5 +33,18 @@ describe('Testes de funcionalidades', () => {
     it('Teste do XPATH', () =>{
       cy.xpath('//*[@id="formNome"]').type('ola')
     })
+
+
+    it.only('Teste com find', () => {
+      cy.get('#buttonList').click()
+      cy.get('#lista li')
+        .find('span')
+        .should('contain','Item 1')
+      cy.get('#buttonList').click()
+      cy.get('#lista li')
+        .find('span')
+        .should('contain','Item 2')
+    })
+
   })
   
