@@ -32,6 +32,9 @@ describe('Testes de funcionalidades', () => {
     })
     it('Teste do XPATH', () =>{
       cy.xpath('//*[@id="formNome"]').type('ola')
+      
+      cy.xpath('//*[@id="tabelaUsuarios"]/tbody/tr[1]/td[6]/input').type('ola')
+
     })
 
 
@@ -45,7 +48,7 @@ describe('Testes de funcionalidades', () => {
         .find('span')
         .should('contain','Item 2')
     })
-    it.only('Teste com find', () => {
+    it('Teste com find', () => {
       cy.get('#buttonListDOM').click()
       cy.get('#lista li')
         .find('span')
@@ -54,8 +57,9 @@ describe('Testes de funcionalidades', () => {
       cy.get('#lista li')
         .find('span')
         .should('contain','Item 2')
-    })
     //Sempre sair do escopo local e começar toda a busca novamente"
+      
+      })
 
   })
   
