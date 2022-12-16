@@ -16,10 +16,8 @@
     "url": "https://github.com/RodrigoRocha07/Teste/issues"
   },
   "homepage": "https://github.com/RodrigoRocha07/Teste#readme",
-  "dependencies": {
-    "cypress": "^9.7.0"
-  },
   "devDependencies": {
+    "cypress": "^12.1.0",
     "cypress-xpath": "^2.0.1"
   },
   "keywords": []
