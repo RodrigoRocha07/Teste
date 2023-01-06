@@ -73,10 +73,15 @@ describe('Testes de funcionalidades', () => {
       }
       cy.get('[id=buttonCount]').should('have.value','1111')
       })
-      
-      
-   
 
-     
+
+
+      let endereco = '//input[@name = "formNome"]'
+      let texto = 'Caraca deu muito bom{enter}'
+    it.only('Teste de xpath', () =>{
+      cy.escrever(endereco,texto)
+    })
+      
+    
 })
   
