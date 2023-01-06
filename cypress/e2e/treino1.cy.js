@@ -1,14 +1,20 @@
+let nome = 'Rodrigo'
+let sobreNome = 'Rocha'
+
+let enderecoNome = '//input[@name = "formNome"]'
+let enderecoSobreNome = '//input[@id = "formSobrenome"]'
+
 
 
 describe('Testes de funcionalidades', () => {
     beforeEach(() => {
       cy.visit('https://wcaquino.me/cypress/componentes.html')
     })
-    it('Teste nome', () => {
-      cy.get('[id = formNome]').should('be.visible').type('Rodrigo')
+    it.only('Teste nome', () => {
+      cy.escrever(enderecoNome,nome)
     })
-    it('Teste sobrenome', () => {
-      cy.get('[id=formSobrenome]').type('Rocha')
+    it.only('Teste sobrenome', () => {
+      cy.escrever(enderecoSobreNome,sobreNome)
     })
     it('Teste radio sexo', () => {
       cy.get('[value="M"]').click()
@@ -74,12 +80,15 @@ describe('Testes de funcionalidades', () => {
       cy.get('[id=buttonCount]').should('have.value','1111')
       })
 
+   
 
 
-      let endereco = '//input[@name = "formNome"]'
-      let texto = 'Caraca deu muito bom{enter}'
-    it.only('Teste de xpath', () =>{
-      cy.escrever(endereco,texto)
+      
+     
+      
+
+    it('Teste de xpath', () =>{
+      cy.escrever(enderecoNome,texto)
     })
       
     
